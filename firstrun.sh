@@ -2,10 +2,12 @@
 
 cd /config
 
-/sbin/setuser nobody curl https://install.meteor.com/ | /sbin/setuser nobody sh
+if [ ! -d "/home/.meteor" ]; then
+  echo "Fresh container detected; installing Meteor. This may take 10+ minutes!!"
+  /sbin/setuser nobody curl https://install.meteor.com/ | /sbin/setuser nobody sh
 
 if [ ! -d "/config/plexrequests-meteor" ]; then
-  echo "First install detected, cloning repository"
+  echo "First install detected, cloning PlexRequests repository"
   git clone https://github.com/lokenx/plexrequests-meteor.git
   cd plexrequests-meteor
 else
@@ -25,5 +27,5 @@ git checkout -f $BRANCH
 chown -R nobody:users /config
 chmod -R g+rw /config
 
-/sbin/setuser nobody meteor update
-/sbin/setuser nobody meteor &
+/sbin/setuser nobody /home/.meteor/meteor update
+/sbin/setuser nobody /home/.meteor/meteor &
