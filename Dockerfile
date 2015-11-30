@@ -17,7 +17,7 @@ mkdir -p /etc/my_init.d && \
 usermod -u 99 nobody && \
 usermod -g 100 nobody && \
 usermod -d /home nobody && \
-chown -R nobody:users /home && \
+chown -R nobody:users /home
 
 ADD firstrun.sh /etc/my_init.d/firstrun.sh
 
