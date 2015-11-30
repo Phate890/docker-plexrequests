@@ -2,6 +2,8 @@
 
 cd /config
 
+/sbin/setuser nobody curl https://install.meteor.com/ | /sbin/setuser nobody sh
+
 if [ ! -d "/config/plexrequests-meteor" ]; then
   echo "First install detected, cloning repository"
   git clone https://github.com/lokenx/plexrequests-meteor.git
