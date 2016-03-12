@@ -4,7 +4,7 @@ MAINTAINER cydiaz
 
 VOLUME ["/config"]
 
-EXPOSE 3003
+EXPOSE 3000
 
 ENV HOME="/root" LC_ALL="C.UTF-8" LANG="en_US.UTF-8" LANGUAGE="en_US.UTF-8"
 
