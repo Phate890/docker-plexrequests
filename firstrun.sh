@@ -4,7 +4,7 @@ cd /config
 
 if [ ! -d "/config/plexrequests-meteor" ]; then
   echo "First install detected, cloning repository"
-  git clone https://github.com/lokenx/plexrequests-meteor.git
+  git clone https://github.com/Phate890/plexrequests-meteor.git
   cd plexrequests-meteor
 else
   echo "Updating repository"
