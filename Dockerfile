@@ -1,10 +1,10 @@
 FROM phusion/baseimage:0.9.16
 
-MAINTAINER aptalca
+MAINTAINER cydiaz
 
 VOLUME ["/config"]
 
-EXPOSE 3000
+EXPOSE 3003
 
 ENV HOME="/root" LC_ALL="C.UTF-8" LANG="en_US.UTF-8" LANGUAGE="en_US.UTF-8"
 
